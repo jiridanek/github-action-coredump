@@ -11,7 +11,7 @@ jobs:
       - name: run
         run: |
           ulimit -c unlimited
-          ./untitled
+          sudo ./untitled
       - name: look for corefile
         if: failure()
         run: |
