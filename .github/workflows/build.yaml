@@ -9,7 +9,9 @@ jobs:
       - name: make
         run: make
       - name: run
-        run: ./untitled
+        run: |
+          ulimit -c unlimited
+          ./untitled
       - name: look for corefile
         if: failure()
         run: |
