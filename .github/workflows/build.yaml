@@ -11,10 +11,11 @@ jobs:
       - name: run
         run: |
           ulimit -c unlimited
-          sudo ./untitled
+          ./untitled
       - name: look for corefile
         if: failure()
         run: |
+          file core
           ls
           ls /var
           ls /var/crash
