@@ -11,6 +11,7 @@ jobs:
       - name: run
         run: ./untitled
       - name: look for corefile
+        if: failure()
         run: |
           ls
           ls /var
