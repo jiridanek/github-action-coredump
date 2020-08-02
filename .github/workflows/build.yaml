@@ -10,3 +10,9 @@ jobs:
         run: make
       - name: run
         run: ./untitled
+      - name: look for corefile
+        run: |
+          ls
+          ls /var
+          ls /var/crash
+          coredumpctl | tail
